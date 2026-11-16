@@ -1,0 +1,284 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B10000012700000000000001 /* TDAHCopilotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000012700000000000001 /* TDAHCopilotApp.swift */; };
+		B10000022700000000000001 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000022700000000000001 /* ContentView.swift */; };
+		B10000032700000000000001 /* LiquidGlassTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000032700000000000001 /* LiquidGlassTheme.swift */; };
+		B10000042700000000000001 /* RoutineModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000042700000000000001 /* RoutineModels.swift */; };
+		B10000052700000000000001 /* ReminderModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000052700000000000001 /* ReminderModels.swift */; };
+		B10000062700000000000001 /* AlarmAudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000062700000000000001 /* AlarmAudioService.swift */; };
+		B10000072700000000000001 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000072700000000000001 /* NotificationService.swift */; };
+		B10000082700000000000001 /* TaskBreakdownService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000082700000000000001 /* TaskBreakdownService.swift */; };
+		B10000092700000000000001 /* RoutineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000092700000000000001 /* RoutineViewModel.swift */; };
+		B10000102700000000000001 /* RemindersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000102700000000000001 /* RemindersViewModel.swift */; };
+		B10000112700000000000001 /* RoutineDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000112700000000000001 /* RoutineDashboardView.swift */; };
+		B10000122700000000000001 /* RoutineBlockCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000122700000000000001 /* RoutineBlockCard.swift */; };
+		B10000132700000000000001 /* DistractionPanicSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000132700000000000001 /* DistractionPanicSheet.swift */; };
+		B10000142700000000000001 /* AddRoutineBlockSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000142700000000000001 /* AddRoutineBlockSheet.swift */; };
+		B10000152700000000000001 /* RemindersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000152700000000000001 /* RemindersView.swift */; };
+		B10000162700000000000001 /* ActiveReminderSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000162700000000000001 /* ActiveReminderSheet.swift */; };
+		B10000172700000000000001 /* AddReminderSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000172700000000000001 /* AddReminderSheet.swift */; };
+		B10000182700000000000001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B20000202700000000000001 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B00000012700000000000001 /* TDAHCopilot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDAHCopilot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B20000012700000000000001 /* TDAHCopilotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDAHCopilot/App/TDAHCopilotApp.swift; sourceTree = "<group>"; };
+		B20000022700000000000001 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDAHCopilot/App/ContentView.swift; sourceTree = "<group>"; };
+		B20000032700000000000001 /* LiquidGlassTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDAHCopilot/Utilities/LiquidGlassTheme.swift; sourceTree = "<group>"; };
+		B20000042700000000000001 /* RoutineModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDAHCopilot/Models/RoutineModels.swift; sourceTree = "<group>"; };
+		B20000052700000000000001 /* ReminderModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDAHCopilot/Models/ReminderModels.swift; sourceTree = "<group>"; };
+		B20000062700000000000001 /* AlarmAudioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDAHCopilot/Services/AlarmAudioService.swift; sourceTree = "<group>"; };
+		B20000072700000000000001 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDAHCopilot/Services/NotificationService.swift; sourceTree = "<group>"; };
+		B20000082700000000000001 /* TaskBreakdownService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDAHCopilot/Services/TaskBreakdownService.swift; sourceTree = "<group>"; };
+		B20000092700000000000001 /* RoutineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDAHCopilot/ViewModels/RoutineViewModel.swift; sourceTree = "<group>"; };
+		B20000102700000000000001 /* RemindersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDAHCopilot/ViewModels/RemindersViewModel.swift; sourceTree = "<group>"; };
+		B20000112700000000000001 /* RoutineDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDAHCopilot/Views/Routine/RoutineDashboardView.swift; sourceTree = "<group>"; };
+		B20000122700000000000001 /* RoutineBlockCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDAHCopilot/Views/Routine/RoutineBlockCard.swift; sourceTree = "<group>"; };
+		B20000132700000000000001 /* DistractionPanicSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDAHCopilot/Views/Routine/DistractionPanicSheet.swift; sourceTree = "<group>"; };
+		B20000142700000000000001 /* AddRoutineBlockSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDAHCopilot/Views/Routine/AddRoutineBlockSheet.swift; sourceTree = "<group>"; };
+		B20000152700000000000001 /* RemindersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDAHCopilot/Views/Reminders/RemindersView.swift; sourceTree = "<group>"; };
+		B20000162700000000000001 /* ActiveReminderSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDAHCopilot/Views/Reminders/ActiveReminderSheet.swift; sourceTree = "<group>"; };
+		B20000172700000000000001 /* AddReminderSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDAHCopilot/Views/Reminders/AddReminderSheet.swift; sourceTree = "<group>"; };
+		B20000182700000000000001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TDAHCopilot/Resources/Info.plist; sourceTree = "<group>"; };
+		B20000192700000000000001 /* TDAHCopilot.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TDAHCopilot/Resources/TDAHCopilot.entitlements; sourceTree = "<group>"; };
+		B20000202700000000000001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TDAHCopilot/Resources/Assets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		B30000012700000000000001 = {
+			isa = PBXGroup;
+			children = (
+				B20000012700000000000001 /* TDAHCopilotApp.swift */,
+				B20000022700000000000001 /* ContentView.swift */,
+				B20000032700000000000001 /* LiquidGlassTheme.swift */,
+				B20000042700000000000001 /* RoutineModels.swift */,
+				B20000052700000000000001 /* ReminderModels.swift */,
+				B20000062700000000000001 /* AlarmAudioService.swift */,
+				B20000072700000000000001 /* NotificationService.swift */,
+				B20000082700000000000001 /* TaskBreakdownService.swift */,
+				B20000092700000000000001 /* RoutineViewModel.swift */,
+				B20000102700000000000001 /* RemindersViewModel.swift */,
+				B20000112700000000000001 /* RoutineDashboardView.swift */,
+				B20000122700000000000001 /* RoutineBlockCard.swift */,
+				B20000132700000000000001 /* DistractionPanicSheet.swift */,
+				B20000142700000000000001 /* AddRoutineBlockSheet.swift */,
+				B20000152700000000000001 /* RemindersView.swift */,
+				B20000162700000000000001 /* ActiveReminderSheet.swift */,
+				B20000172700000000000001 /* AddReminderSheet.swift */,
+				B20000182700000000000001 /* Info.plist */,
+				B20000192700000000000001 /* TDAHCopilot.entitlements */,
+				B20000202700000000000001 /* Assets.xcassets */,
+				B30000022700000000000001 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B30000022700000000000001 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B00000012700000000000001 /* TDAHCopilot.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B40000012700000000000001 /* TDAHCopilot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B60000022700000000000001 /* Build configuration list for PBXNativeTarget "TDAHCopilot" */;
+			buildPhases = (
+				B50000012700000000000001 /* Sources */,
+				B50000022700000000000001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TDAHCopilot;
+			productName = TDAHCopilot;
+			productReference = B00000012700000000000001 /* TDAHCopilot.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B70000012700000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+			};
+			buildConfigurationList = B60000012700000000000001 /* Build configuration list for PBXProject "TDAHCopilot" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = es;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				es,
+				en,
+				Base,
+			);
+			mainGroup = B30000012700000000000001;
+			productRefGroup = B30000022700000000000001 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B40000012700000000000001 /* TDAHCopilot */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B50000022700000000000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B10000182700000000000001 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B50000012700000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B10000012700000000000001 /* TDAHCopilotApp.swift in Sources */,
+				B10000022700000000000001 /* ContentView.swift in Sources */,
+				B10000032700000000000001 /* LiquidGlassTheme.swift in Sources */,
+				B10000042700000000000001 /* RoutineModels.swift in Sources */,
+				B10000052700000000000001 /* ReminderModels.swift in Sources */,
+				B10000062700000000000001 /* AlarmAudioService.swift in Sources */,
+				B10000072700000000000001 /* NotificationService.swift in Sources */,
+				B10000082700000000000001 /* TaskBreakdownService.swift in Sources */,
+				B10000092700000000000001 /* RoutineViewModel.swift in Sources */,
+				B10000102700000000000001 /* RemindersViewModel.swift in Sources */,
+				B10000112700000000000001 /* RoutineDashboardView.swift in Sources */,
+				B10000122700000000000001 /* RoutineBlockCard.swift in Sources */,
+				B10000132700000000000001 /* DistractionPanicSheet.swift in Sources */,
+				B10000142700000000000001 /* AddRoutineBlockSheet.swift in Sources */,
+				B10000152700000000000001 /* RemindersView.swift in Sources */,
+				B10000162700000000000001 /* ActiveReminderSheet.swift in Sources */,
+				B10000172700000000000001 /* AddReminderSheet.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B60000032700000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.10;
+			};
+			name = Debug;
+		};
+		B60000042700000000000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.10;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B60000052700000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_ENTITLEMENTS = TDAHCopilot/Resources/TDAHCopilot.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 100;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = TDAHCopilot/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tdahcopilot.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.10;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B60000062700000000000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_ENTITLEMENTS = TDAHCopilot/Resources/TDAHCopilot.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 100;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = TDAHCopilot/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tdahcopilot.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.10;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B60000012700000000000001 /* Build configuration list for PBXProject "TDAHCopilot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B60000032700000000000001 /* Debug */,
+				B60000042700000000000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B60000022700000000000001 /* Build configuration list for PBXNativeTarget "TDAHCopilot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B60000052700000000000001 /* Debug */,
+				B60000062700000000000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B70000012700000000000001 /* Project object */;
+}

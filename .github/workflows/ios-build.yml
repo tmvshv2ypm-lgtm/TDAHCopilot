@@ -1,0 +1,46 @@
+name: Build TDAH Copilot iOS (.ipa)
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  workflow_dispatch:
+
+jobs:
+  build-ios:
+    name: Compile TDAH Copilot on Xcode 27 Runner
+    runs-on: xcode-27
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: |
+          if [ -d /Applications/Xcode.app/Contents/Developer ]; then
+            sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+          fi
+          xcodebuild -version
+
+      - name: Build TDAHCopilot (Release - iOS Device)
+        run: |
+          xcodebuild clean build \
+            -project TDAHCopilot.xcodeproj \
+            -scheme TDAHCopilot \
+            -configuration Release \
+            -sdk iphoneos \
+            -derivedDataPath build \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO
+
+      - name: Package Unsigned .ipa for Sideloading (AltStore / SideStore / Sideloadly)
+        run: |
+          mkdir -p Payload
+          cp -r build/Build/Products/Release-iphoneos/TDAHCopilot.app Payload/
+          zip -r TDAHCopilot-Unsigned.ipa Payload
+
+      - name: Upload TDAHCopilot.ipa Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: TDAHCopilot-iOS-IPA
+          path: TDAHCopilot-Unsigned.ipa
+          retention-days: 30

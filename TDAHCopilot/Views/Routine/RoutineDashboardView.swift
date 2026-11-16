@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 /// Pantalla Principal (Módulo 1): Dashboard de Rutina Visual para José.
 /// Incluye cabecera de estado, línea de tiempo vertical con cuenta regresiva gigante en el bloque activo,
@@ -307,6 +308,6 @@ struct RoutineDashboardView: View {
         formatter.locale = Locale(identifier: "es_ES")
         formatter.dateFormat = "EEEE d 'de' MMMM · h:mm a"
         let raw = formatter.string(from: date)
-        return raw.prefix(1).uppercased() + raw.dropFirst()
+        return raw.prefix(1).uppercased() + String(raw.dropFirst())
     }
 }

@@ -1,4 +1,5 @@
 import Foundation
+import Combine
 @preconcurrency import UserNotifications
 
 /// Gestiona permisos y notificaciones locales "Time-Sensitive" para despertar al usuario fuera de la app
@@ -74,26 +75,29 @@ final class NotificationService: NSObject, ObservableObject {
 extension NotificationService: UNUserNotificationCenterDelegate {
     nonisolated func userNotificationCenter(
         _ center: UNUserNotificationCenter,
-        willPresent notification: UNNotification
-    ) async -> UNNotificationPresentationOptions {
+        willPresent notification: UNNotification,
+        withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void
+    ) {
         let idString = notification.request.content.userInfo["reminderId"] as? String
         if let idString, let uuid = UUID(uuidString: idString) {
-            await MainActor.run {
+            Task { @MainActor in
                 self.onReminderNotificationTapped?(uuid)
             }
         }
-        return [.banner, .sound]
+        completionHandler([.banner, .sound])
     }
 
     nonisolated func userNotificationCenter(
         _ center: UNUserNotificationCenter,
-        didReceive response: UNNotificationResponse
-    ) async {
+        didReceive response: UNNotificationResponse,
+        withCompletionHandler completionHandler: @escaping () -> Void
+    ) {
         let idString = response.notification.request.content.userInfo["reminderId"] as? String
         if let idString, let uuid = UUID(uuidString: idString) {
-            await MainActor.run {
+            Task { @MainActor in
                 self.onReminderNotificationTapped?(uuid)
             }
         }
+        completionHandler()
     }
 }

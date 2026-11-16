@@ -9,7 +9,7 @@ struct TDAHCopilotApp: App {
     @State private var selectedTab: ContentView.CopilotTab = .routine
     @State private var isShowingPanicSheet: Bool = false
 
-    var body: some View {
+    var body: some Scene {
         WindowGroup {
             ContentView(
                 routineViewModel: routineViewModel,

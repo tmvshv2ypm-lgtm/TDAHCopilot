@@ -12,10 +12,16 @@ struct AddReminderSheet: View {
     @State private var customDate: Date = Date().addingTimeInterval(3600)
     @State private var friction: FrictionLevel = .high
 
-    private let quickTemplates: [(label: String, title: String, friction: FrictionLevel)] = [
-        ("Examen", "Estudiar para el examen de ", .high),
-        ("Tarea ULA/UNEFA", "Entregar tarea / práctica de ", .medium),
-        ("Casa", "Limpiar y ordenar ", .low)
+    private struct QuickTemplate: Identifiable {
+        let id: String
+        let title: String
+        let friction: FrictionLevel
+    }
+
+    private let quickTemplates: [QuickTemplate] = [
+        QuickTemplate(id: "Examen", title: "Estudiar para el examen de ", friction: .high),
+        QuickTemplate(id: "Tarea ULA/UNEFA", title: "Entregar tarea / práctica de ", friction: .medium),
+        QuickTemplate(id: "Casa", title: "Limpiar y ordenar ", friction: .low)
     ]
 
     private var effectiveDate: Date {
@@ -37,12 +43,12 @@ struct AddReminderSheet: View {
 
                             ScrollView(.horizontal, showsIndicators: false) {
                                 HStack(spacing: 8) {
-                                    ForEach(quickTemplates, id: \.label) { item in
+                                    ForEach(quickTemplates) { item in
                                         Button {
                                             title = item.title
                                             friction = item.friction
                                         } label: {
-                                            Text(item.label)
+                                            Text(item.id)
                                                 .font(.caption.weight(.bold))
                                                 .foregroundStyle(.white)
                                                 .padding(.horizontal, 12)

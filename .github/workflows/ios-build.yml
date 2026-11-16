@@ -22,6 +22,7 @@ jobs:
 
       - name: Build TDAHCopilot (Release - iOS Device)
         run: |
+          set -o pipefail
           xcodebuild clean build \
             -project TDAHCopilot.xcodeproj \
             -scheme TDAHCopilot \
@@ -30,7 +31,27 @@ jobs:
             -derivedDataPath build \
             CODE_SIGN_IDENTITY="" \
             CODE_SIGNING_REQUIRED=NO \
-            CODE_SIGNING_ALLOWED=NO
+            CODE_SIGNING_ALLOWED=NO 2>&1 | tee xcodebuild.log
+
+      - name: Surface Build Errors as Annotations
+        if: failure()
+        run: |
+          python3 - << 'EOF'
+          import os
+          if not os.path.exists("xcodebuild.log"):
+              print("::error::xcodebuild.log missing")
+              raise SystemExit(0)
+          with open("xcodebuild.log", errors="replace") as f:
+              lines = f.read().splitlines()
+          errs = list(dict.fromkeys(
+              l.strip() for l in lines
+              if ": error:" in l or "fatal error:" in l or "error: " in l
+          ))
+          if not errs:
+              errs = [l.strip() for l in lines[-12:] if l.strip()]
+          for line in errs[:8]:
+              print(f"::error::{line[:350]}")
+          EOF
 
       - name: Package Unsigned .ipa for Sideloading (AltStore / SideStore / Sideloadly)
         run: |
